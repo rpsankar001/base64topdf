@@ -2,7 +2,7 @@
   "name": "base64topdf",
   "description": "base64topdf",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.1.1",
   "main": "index.js",
   "dependencies": {
     "fs": "0.0.1-security"
