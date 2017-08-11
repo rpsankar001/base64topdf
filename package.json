@@ -2,9 +2,21 @@
   "name": "base64topdf",
   "description": "base64topdf",
   "private": false,
-  "version": "1.1.1",
+  "version": "1.1.5",
   "main": "index.js",
   "dependencies": {
     "fs": "0.0.1-security"
+  },
+  "keywords": [
+    "base64",
+    "pdf",
+    "pdf",
+    "conversion"
+  ],
+  "author":"PRABU SANKAR R",
+  "homepage":"https://github.com/rpsankar001",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rpsankar001/base64topdf.git"
   }
 }
