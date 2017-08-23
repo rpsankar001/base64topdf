@@ -24,6 +24,27 @@ module.exports = {
             var bitmap = new Buffer(base64str, 'base64');
             // write buffer to file
             fs.writeFileSync(file, bitmap);
+        },
+        /**
+         * @return (str)
+         * @param (string) rtfStr
+         * @desc Function to convert the rich text content to normal text
+         */
+        rtfToText : (rtfStr) => {
+                //converting rtf data into normal text data
+                let convertedText = rtfStr.replace(/\\par[d]?/g, "");
+                convertedText = convertedText.replace(/\{\*?\\[^{}]+}|[{}]|\\\n?[A-Za-z]+\n?(?:-?\d+)?[ ]?/g, "").trim();
+                return convertedText;
+        },
+        /**
+         * @return (rtf)
+         * @param (string) textStr
+         * @desc Function to convert the text content to rich text content.
+         */
+        textToRtf : (textStr) =>{
+            textStr = textStr.replace(/\n/g, "\\par\n");
+            //converting text into rtf
+            return "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang2057{\\fonttbl{\\f0\\fnil\\fcharset0 Microsoft Sans Serif;}}\n\\viewkind4\\uc1\\pard\\f0\\fs17 " + textStr + "\\par\n}";
         }
 };
 
