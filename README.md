@@ -2,11 +2,28 @@
 Here we are going to convert the base64 content to pdf and neither converts the pdf to base64.
 Also we can convert rtfText to plain text and vise versa.
 
-For importing this library
+
+
 ## Importing
 ```
 const base64 = require('base64topdf');
 ```
+## Using npm:
+```
+$ npm i -g npm
+$ npm i --save base64topdf
+```
+
+
+## Why base64topdf?
+    Its easy to use and we can convert the pdf as base64 content and vise versa.
+    * We can convert RTF content to base64.
+    * We can convert String to base64.
+    * We can convert pdf to base64.
+    * We can convert base64 to pdf.
+    * We can convert base64 to string.
+    * We can convert plain text to RTF.
+
 ## Encoding PDF to Base64
 If you wants to encode the pdf file to base64 means you can use this function to Encode it.
 ```
@@ -26,4 +43,14 @@ let plainText = base64.rtfToText('rtfStr');
 If you wants to convert the plain text into rtf format means you can use this function.
 ```
 let rtfText = base64.textToRtf('textStr');
+```
+## Converting String to Base64
+If you wants to convert the String into base64 format means you can use this function.
+```
+let base64Str = base64.strToBase64('String');
+```
+## Converting Base64 to String
+If you wants to convert the Base64 format to String means you can use this function.
+```
+let str = base64.base64ToStr('base64Str');
 ```
